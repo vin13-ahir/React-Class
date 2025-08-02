@@ -24,6 +24,7 @@ const GameBoard = () => {
         setBoard(Array.from({length:3}, () => Array(3).fill(null)));
         setPlayer("X");
         setWinningPlayer(null);
+        move.current = 0;
     }
 
     const checkWinner = (arr) => {
@@ -92,5 +93,6 @@ const GameBoard = () => {
         </>
     )
 };
+
 
 export default GameBoard;
