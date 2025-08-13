@@ -1,0 +1,37 @@
+1. What is a single page application.
+--> It is a type of application that Loads only one HTML page from the server. Updates content dynamically using JavaScript, instead of reloading the whole page. Feels like a desktop app because navigation is instant — only parts of the page change.
+
+2. What is client side rendering/server side rendering? Compare their pros and cons.
+--> 
+i. Client Side Rendering: Server sends a mostly empty HTML file + JavaScript bundle. Browser runs the JavaScript, fetches data, and builds the UI.
+
+Pros: Less load on the server, Great for complex single-page applications, and Very interactive once loaded.
+
+Cons: Slower first load (user waits for all js files to download & run), and Requires JavaScript to be enabled.
+
+ii. Server Side Rendering: Server builds the HTML for the page before sending it to the browser. Browser displays the page instantly, then JavaScript takes over for interactivity.
+ 
+Pros: Faster initial page load (HTML arrives ready to display), Better SEO (search engines get full HTML content), and Works even if JS is slow or disabled.
+
+Cons: More load on the server, Slower navigation between pages, and more complex to set up.
+
+3. What is routing? Why do we need it?
+--> It is a process of deciding what content or page to show based on the URL the user visits. We need routing for these reasons,
+i. Navigating between different pages
+ii. Better User Experience
+iii. SPA
+
+4. What is the difference between history and location objects.
+-->
+i. History Object: It lets you change or navigate between URLs. Like, history.push("/history") → go to the History page, history.replace("/login") → go to login but don’t keep the old page in history, and history.goBack() → go back to the previous page.
+
+ii. Location Object: It is a read-only object that tells you where you are right now in terms of URL. Key usage is to provide an information about the current route.
+
+5. Describe the mechanism of react router
+--> React Router lets your React app have multiple pages without reloading the page.
+It changes what’s shown on the screen by updating the URL and matching it to a component.
+mechanism:
+i. Browser History API: React Router uses window.history.pushState() and window.history.replaceState() to change the URL without refreshing.
+This makes navigation instant.
+ii. Route Matching: When the URL matches /about, React Router renders the <About /> component.
+iii. Listen for updates: It listens for URL changes (via links, browser back/forward buttons, or code). When the URL changes, it re-checks the routes and updates the UI.
