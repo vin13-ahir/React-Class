@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.cell{
+    height: 100px;
+    width: 100px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
